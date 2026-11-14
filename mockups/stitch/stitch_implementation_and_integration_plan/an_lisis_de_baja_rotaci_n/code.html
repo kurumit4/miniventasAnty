@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary":"#ffffff","surface-bright":"#f7f9ff","text-muted":"#52606D","background":"#f7f9ff","outline":"#6f7a70","tertiary-fixed-dim":"#8cd7a5","surface-container-low":"#edf4ff","secondary-container":"#98defe","on-surface-variant":"#3f4941","surface":"#f7f9ff","surface-bg":"#F5F7F6","on-primary-container":"#d1ffdb","on-primary-fixed":"#00210f","tertiary-fixed":"#a7f3bf","error":"#ba1a1a","on-error":"#ffffff","surface-container":"#e4effd","border-subtle":"#D9E0DC","on-tertiary-fixed":"#00210f","on-tertiary":"#ffffff","tertiary":"#15643c","status-warning":"#B45309","on-primary-fixed-variant":"#00522d","surface-container-high":"#dfe9f7","outline-variant":"#becabe","on-secondary-container":"#07637f","error-container":"#ffdad6","surface-card":"#FFFFFF","primary":"#006438","on-background":"#121d26","primary-container":"#1b7f4c","on-secondary-fixed":"#001f2a","primary-fixed":"#99f6b8","inverse-on-surface":"#e8f2ff","tertiary-container":"#347d52","surface-variant":"#d9e3f1","secondary":"#0f6682","status-success":"#2E7D32","secondary-fixed":"#bde9ff","secondary-fixed-dim":"#8ad0ef","on-tertiary-fixed-variant":"#00522e","on-secondary-fixed-variant":"#004d64","inverse-surface":"#27313c","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","surface-tint":"#006d3d","primary-fixed-dim":"#7dda9e","status-danger":"#B91C1C","on-error-container":"#93000a","on-surface":"#121d26","inverse-primary":"#7dda9e","on-tertiary-container":"#d2ffdc","surface-container-highest":"#d9e3f1","surface-dim":"#d1dbe8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-2xl":"3rem","space-lg":"1.5rem","space-sm":"0.5rem","margin":"1rem","gutter-desktop":"1.5rem","gutter":"1rem","space-xl":"2rem","space-md":"1rem","margin-desktop":"1.5rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"kpi-value":["Inter"],"kpi-value-mobile":["Inter"],"table-data":["Inter"]},"fontSize":{"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","fontWeight":"600"}],"kpi-value":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"kpi-value-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"table-data":["14px",{"lineHeight":"20px","fontWeight":"500"}]}}}}</script></head><body class="bg-surface-bg font-body-md text-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card z-50 flex flex-col justify-between border-r border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border-subtle bg-surface-card"><img alt="MiMercado Ventas Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCIVW-_1tLYvzP2T73q7IKSBsn7ZwVqKVeod7QCiIr9BsTWm_2pOovzSAD9DgEyDcVvc3LAiaAWW3F0JYyPxfLTXx5wbrOOTArAR08pwe-ZLAguItDvxmhpEb1TbZ0TDSvBUST1K7ZpIrj7yYbSDO2EIowxy43qhcQ8zfS0R3C3SZSFl3DBxi1npYYCUw0U1gNGL0HiFLmJzq3W0txrN0FuG512DjdsO-td7WxRfpY"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface leading-tight tracking-tight">MiMercado</span><span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Supermercado de Barrio</span></div></div><div class="p-space-md"><div class="font-label-sm text-label-sm uppercase text-text-muted px-space-sm pb-space-xs font-semibold">Operaciones</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="tablero" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Tablero</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="ventas" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Ventas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="nueva-venta" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Nueva venta</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="productos" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Productos</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="baja-rotacion" href="#"><span class="material-symbols-outlined text-[20px]">trending_down</span><span class="font-body-md text-body-md">Baja rotación</span></a></nav></div></div><div class="p-space-md border-t border-border-subtle bg-surface-bg"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Caja & Turno</span><span class="inline-flex items-center px-1.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-tertiary font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success mr-1"></span>Activa</span></div><div class="font-label-md text-label-md text-on-surface font-semibold truncate">Caja Principal</div><div class="font-body-sm text-body-sm text-text-muted flex items-center gap-1 mt-0.5"><span class="material-symbols-outlined text-[14px]">schedule</span>Turno Mañana</div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-subtle z-40 px-gutter-desktop flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="MiMercado Ventas Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCIVW-_1tLYvzP2T73q7IKSBsn7ZwVqKVeod7QCiIr9BsTWm_2pOovzSAD9DgEyDcVvc3LAiaAWW3F0JYyPxfLTXx5wbrOOTArAR08pwe-ZLAguItDvxmhpEb1TbZ0TDSvBUST1K7ZpIrj7yYbSDO2EIowxy43qhcQ8zfS0R3C3SZSFl3DBxi1npYYCUw0U1gNGL0HiFLmJzq3W0txrN0FuG512DjdsO-td7WxRfpY"/><div class="flex items-center gap-space-xs text-text-muted font-body-sm text-body-sm border border-border-subtle rounded-lg px-2.5 py-1.5 bg-surface-bg"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span>13/11/2026</span></div><div class="relative hidden xl:block"><div class="flex items-center border border-border-subtle rounded-lg bg-surface-bg px-2.5 py-1.5 text-text-muted"><span class="material-symbols-outlined text-[16px] mr-1.5">storefront</span><span class="font-label-md text-label-md text-on-surface font-medium">Sede Central (Barrio Sur)</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs border-r border-border-subtle pr-space-md"><button class="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-on-surface hover:bg-surface-bg transition-colors" title="Buscar rápido" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button class="relative w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-on-surface hover:bg-surface-bg transition-colors" title="Alertas de stock" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-status-danger"></span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Carlos</div><div class="font-label-sm text-label-sm text-text-muted">Propietario / Operador</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-bg flex-1 p-gutter-desktop"><div class="flex flex-col w-full">
+<div class="relative overflow-hidden bg-surface-card rounded-xl shadow-sm mb-6 p-6">
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-surface-container opacity-60 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">inventory</span>
+<span>RF-14 • RN-09 Módulo de Inventarios</span>
+</span>
+<span class="text-text-muted font-body-sm text-body-sm">• Sede Central</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-1">
+          Detección de Baja Rotación
+        </h1>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed">
+          Identifica productos activos sin ninguna venta completada en el periodo seleccionado para apoyar decisiones de liquidación, promociones o devolución al proveedor.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center">
+<button class="h-10 px-4 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-all flex items-center gap-2 font-label-md text-label-md" id="btn-exportar" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar lista (CSV)</span>
+</button>
+<button class="h-10 px-5 rounded-lg bg-primary-container hover:bg-primary text-on-primary transition-all flex items-center gap-2 font-label-md text-label-md shadow-sm active:scale-[0.98]" id="btn-actualizar" type="button">
+<span class="material-symbols-outlined text-[18px] transition-transform" id="refresh-icon">sync</span>
+<span>Actualizar reporte</span>
+</button>
+</div>
+</div>
+<!-- Barra de control y parametrización de días (RN-09) -->
+<div class="mt-6 pt-5 bg-surface-bg rounded-lg p-4 flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-4 flex-1">
+<div class="flex flex-col sm:flex-row sm:items-center gap-2">
+<label class="font-label-md text-label-md text-on-surface whitespace-nowrap flex items-center gap-1.5" for="filtro-dias">
+<span class="material-symbols-outlined text-text-muted text-[18px]">history_toggle_off</span>
+<span>Sin ventas en los últimos:</span>
+</label>
+<div class="relative min-w-[160px]">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg bg-surface-card text-on-surface font-table-data text-table-data appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-secondary" id="filtro-dias">
+<option value="15">15 días</option>
+<option selected="" value="30">30 días (por defecto)</option>
+<option value="45">45 días</option>
+<option value="60">60 días</option>
+<option value="90">90 días</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-text-muted pointer-events-none text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-2">
+<label class="font-label-md text-label-md text-on-surface whitespace-nowrap flex items-center gap-1.5" for="filtro-categoria">
+<span class="material-symbols-outlined text-text-muted text-[18px]">category</span>
+<span>Categoría:</span>
+</label>
+<div class="relative min-w-[160px]">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg bg-surface-card text-on-surface font-table-data text-table-data appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-secondary" id="filtro-categoria">
+<option selected="" value="todas">Todas</option>
+<option value="abarrotes">Abarrotes</option>
+<option value="aseo">Aseo y Cuidado</option>
+<option value="granos">Granos</option>
+<option value="bebidas">Bebidas</option>
+<option value="lacteos">Lácteos</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-text-muted pointer-events-none text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-body-sm text-body-sm self-end sm:self-center">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Periodo activo: 14/10/2026 – 13/11/2026</span>
+</div>
+</div>
+</div>
+<!-- Resumen Ejecutivo de Impacto -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+<div class="bg-surface-card p-5 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider block mb-1">Volumen Crítico</span>
+<div class="font-kpi-value text-kpi-value text-on-surface">14 <span class="font-headline-md text-headline-md text-text-muted font-normal">productos</span></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container/30 flex items-center justify-center text-status-danger">
+<span class="material-symbols-outlined text-[22px]">trending_down</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-text-muted">En los últimos <strong class="text-on-surface font-semibold" id="card-periodo-tag">30 días</strong></span>
+<span class="font-label-md text-label-md text-status-danger font-semibold">▲ +3 vs mes anterior</span>
+</div>
+</div>
+<div class="bg-surface-card p-5 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider block mb-1">Capital Estancado (Costo inventario)</span>
+<div class="font-kpi-value text-kpi-value text-on-surface tracking-tight">$ 1.840.000 <span class="font-body-sm text-body-sm text-text-muted font-normal">COP</span></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-text-muted">Representa el <strong class="text-on-surface font-semibold">8.4%</strong> del capital total</span>
+<span class="font-label-md text-label-md text-status-warning font-semibold">Inmovilizado</span>
+</div>
+</div>
+<div class="bg-surface-card p-5 rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider block mb-1">Unidades Inmóviles</span>
+<div class="font-kpi-value text-kpi-value text-on-surface">320 <span class="font-headline-md text-headline-md text-text-muted font-normal">unidades</span></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">shelves</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-text-muted">Ocupación estimada en estantería</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">~4 bandejas</span>
+</div>
+</div>
+</div>
+<!-- Sugerencias Inteligentes Carlos -->
+<div class="bg-gradient-to-r from-surface-card via-surface-card to-surface-container-low p-6 rounded-xl shadow-sm mb-6 relative">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">lightbulb</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Sugerencias Comerciales para Carlos</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full uppercase">Acción Inmediata</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted mt-1">Estrategias recomendadas para dinamizar el flujo de caja y liberar espacio útil de bodega.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+<div class="p-4 bg-surface-bg rounded-lg hover:bg-surface-container-lowest transition-colors flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5">join_inner</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold mb-1">Armar Combo Estratégico</h3>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed">
+            Vincular <strong class="text-on-surface">Café Especial Molido 250g</strong> con <strong class="text-on-surface">Pan Bimbo Artesano</strong> en un <span class="text-tertiary font-semibold">"Combo Mañanero"</span> con 10% de descuento. El pan rota 14 veces más rápido.
+          </p>
+</div>
+</div>
+<div class="p-4 bg-surface-bg rounded-lg hover:bg-surface-container-lowest transition-colors flex items-start gap-3">
+<span class="material-symbols-outlined text-status-warning text-[24px] mt-0.5">rule_settings</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold mb-1">Ajuste de Stock Mínimo y Bloqueo de Recompra</h3>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed">
+            Pausar pedidos automáticos para <strong class="text-on-surface">Harina de Almendras</strong> y reducir el umbral de seguridad de 20 a 5 unidades antes de la próxima visita del preventista.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Estado Alternativo Banner: Sin Productos Estancados (Oculto por defecto o conmutable) -->
+<div class="hidden bg-tertiary-fixed/30 rounded-xl p-6 mb-6 flex-col sm:flex-row items-center gap-4 text-center sm:text-left" id="banner-sin-rotacion-cero">
+<div class="w-12 h-12 rounded-full bg-status-success text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">¡Excelente! Todos los productos han tenido rotación en el periodo seleccionado</h3>
+<p class="font-body-md text-body-md text-text-muted mt-0.5">No se detectaron existencias congeladas con el umbral actual. Tu inventario está circulando de acuerdo a la demanda prevista.</p>
+</div>
+<button class="px-4 py-2 bg-surface-card text-on-surface font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container transition-colors" onclick="restablecerFiltros()" type="button">
+      Ver reporte estándar
+    </button>
+</div>
+<!-- Tabla de Productos de Baja Rotación -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col mb-8">
+<div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-card">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-md text-headline-md text-on-surface">Detalle de Inventario Inmóvil</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-semibold">
+          4 registros priorizados
+        </span>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-bg text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary placeholder:text-text-muted" id="buscador-tabla" placeholder="Buscar por SKU o nombre..." type="text"/>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="tabla-baja-rotacion">
+<thead>
+<tr class="bg-surface-bg text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">SKU</th>
+<th class="py-3 px-4 font-semibold">Producto</th>
+<th class="py-3 px-4 font-semibold">Categoría</th>
+<th class="py-3 px-4 font-semibold text-right">Días sin ventas</th>
+<th class="py-3 px-4 font-semibold text-right">Stock Inmóvil</th>
+<th class="py-3 px-4 font-semibold text-right">Costo Unit.</th>
+<th class="py-3 px-4 font-semibold text-right">Capital Inmovilizado</th>
+<th class="py-3 px-4 font-semibold text-right">Última Venta</th>
+<th class="py-3 px-4 font-semibold text-center">Acciones Sugeridas</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0" id="cuerpo-tabla">
+<!-- SKU-508 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-4 font-mono font-table-data text-table-data text-text-muted whitespace-nowrap">SKU-508</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-warning shrink-0" title="Atención requerida"></span>
+<span>Café Especial Molido 250g</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Abarrotes</span>
+</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-status-warning font-semibold">42 días</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-on-surface">24 un.</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted">$ 14.000</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data font-semibold text-on-surface">$ 336.000</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted whitespace-nowrap">02/10/2026</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm flex items-center gap-1" onclick="ejecutarAccion('Promoción', 'Café Especial Molido 250g', 'SKU-508')" type="button">
+<span class="material-symbols-outlined text-[16px]">percent</span>
+<span>Aplicar Descuento / Promoción</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- SKU-612 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-4 font-mono font-table-data text-table-data text-text-muted whitespace-nowrap">SKU-612</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-warning shrink-0" title="Atención requerida"></span>
+<span>Enjuague Bucal Menta 500ml</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Aseo y Cuidado</span>
+</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-status-warning font-semibold">38 días</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-on-surface">18 un.</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted">$ 12.500</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data font-semibold text-on-surface">$ 225.000</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted whitespace-nowrap">06/10/2026</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm flex items-center gap-1" onclick="ejecutarAccion('Descuento', 'Enjuague Bucal Menta 500ml', 'SKU-612')" type="button">
+<span class="material-symbols-outlined text-[16px]">local_offer</span>
+<span>Aplicar Descuento</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- SKU-441 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-4 font-mono font-table-data text-table-data text-text-muted whitespace-nowrap">SKU-441</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-danger shrink-0" title="Crítico / Prolongado"></span>
+<span>Harina de Almendras 500g</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Granos</span>
+</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-status-danger font-semibold">60 días</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-on-surface">15 un.</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted">$ 16.000</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data font-semibold text-on-surface">$ 240.000</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted whitespace-nowrap">14/09/2026</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5">
+<button class="h-8 px-2.5 rounded-lg bg-error-container/50 text-status-danger hover:bg-error hover:text-on-error transition-colors font-label-sm text-label-sm flex items-center gap-1 font-semibold" onclick="ejecutarAccion('Liquidación', 'Harina de Almendras 500g', 'SKU-441')" type="button">
+<span class="material-symbols-outlined text-[16px]">sell</span>
+<span>Liquidación</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- SKU-730 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-4 font-mono font-table-data text-table-data text-text-muted whitespace-nowrap">SKU-730</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-warning shrink-0" title="Atención requerida"></span>
+<span>Té Verde con Limón caja x20</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bebidas</span>
+</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-status-warning font-semibold">31 días</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-on-surface">30 un.</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted">$ 5.200</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data font-semibold text-on-surface">$ 156.000</td>
+<td class="py-3.5 px-4 text-right font-table-data text-table-data text-text-muted whitespace-nowrap">13/10/2026</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary transition-colors font-label-sm text-label-sm flex items-center gap-1 font-semibold" onclick="ejecutarAccion('2x1', 'Té Verde con Limón caja x20', 'SKU-730')" type="button">
+<span class="material-symbols-outlined text-[16px]">inventory</span>
+<span>Promoción 2x1</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación y Resumen Inferior -->
+<div class="p-4 bg-surface-bg flex flex-col sm:flex-row items-center justify-between gap-3 text-body-sm font-body-sm text-text-muted">
+<div>Mostrando <strong class="text-on-surface font-semibold">4</strong> de <strong class="text-on-surface font-semibold">14</strong> productos críticos detectados</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-card flex items-center justify-center text-text-muted disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 font-label-md text-label-md bg-primary-container text-on-primary rounded-lg">1</span>
+<button class="w-8 h-8 rounded-lg bg-surface-card flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal Interactivo para Acciones Rápidas (Nivel 3) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="modal-accion">
+<div class="bg-surface-card rounded-xl max-w-md w-full p-6 shadow-xl relative animate-in fade-in duration-200">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface" id="modal-titulo">Aplicar Estrategia</h3>
+<span class="font-label-sm text-label-sm text-text-muted" id="modal-subtitulo">SKU-000</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-text-muted hover:text-on-surface hover:bg-surface-bg flex items-center justify-center" onclick="cerrarModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-4 my-4">
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1">Producto</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-bg text-on-surface font-body-md text-body-md focus:outline-none" id="modal-producto" readonly="" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1">Tipo de Intervención</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-bg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" id="modal-tipo">
+<option value="promo">Descuento temporal (15% a 30%)</option>
+<option value="2x1">Campaña 2x1 (Rotación forzada)</option>
+<option value="combo">Armar combo con producto de alta demanda</option>
+<option value="liquidacion">Liquidación total a costo de fábrica</option>
+<option value="devolucion">Solicitar recambio / Devolución a proveedor</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1">Nota operativa para caja</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-bg text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary placeholder:text-text-muted" placeholder="Ej: Mostrar en counter principal hasta agotar lote..." rows="2"></textarea>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 mt-6">
+<button class="h-10 px-4 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-bg transition-colors" onclick="cerrarModal()" type="button">
+          Cancelar
+        </button>
+<button class="h-10 px-5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md transition-colors shadow-sm" onclick="confirmarAccion()" type="button">
+          Guardar Configuración
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast de Confirmación -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-xl hidden flex items-center gap-3 z-50" id="toast-notificacion">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">task_alt</span>
+<span class="font-body-md text-body-md" id="toast-mensaje">Acción procesada con éxito</span>
+</div>
+<script>
+    // Parámetros y Filtros
+    const selectDias = document.getElementById('filtro-dias');
+    const selectCategoria = document.getElementById('filtro-categoria');
+    const btnActualizar = document.getElementById('btn-actualizar');
+    const refreshIcon = document.getElementById('refresh-icon');
+    const cardPeriodoTag = document.getElementById('card-periodo-tag');
+    const bannerSinRotacion = document.getElementById('banner-sin-rotacion-cero');
+    const tablaContainer = document.getElementById('tabla-baja-rotacion');
+    const buscador = document.getElementById('buscador-tabla');
+
+    // Cambiar texto de días en tarjeta de impacto
+    selectDias.addEventListener('change', (e) => {
+      cardPeriodoTag.innerText = `${e.target.value} días`;
+      simularActualizacion();
+    });
+
+    selectCategoria.addEventListener('change', () => {
+      filtrarPorCategoria();
+    });
+
+    btnActualizar.addEventListener('click', () => {
+      refreshIcon.classList.add('rotate-180');
+      setTimeout(() => {
+        refreshIcon.classList.remove('rotate-180');
+        mostrarToast('Reporte actualizado con datos de turnos y sincronización de caja');
+      }, 500);
+    });
+
+    function simularActualizacion() {
+      // Simulación de estado sin productos cuando se elige un periodo muy corto (ej: 15 días demostrativo)
+      if (selectDias.value === '15') {
+        bannerSinRotacion.classList.remove('hidden');
+        bannerSinRotacion.classList.add('flex');
+        tablaContainer.closest('.bg-surface-card').classList.add('opacity-40', 'pointer-events-none');
+      } else {
+        bannerSinRotacion.classList.add('hidden');
+        bannerSinRotacion.classList.remove('flex');
+        tablaContainer.closest('.bg-surface-card').classList.remove('opacity-40', 'pointer-events-none');
+      }
+    }
+
+    function restablecerFiltros() {
+      selectDias.value = '30';
+      selectCategoria.value = 'todas';
+      cardPeriodoTag.innerText = '30 días';
+      simularActualizacion();
+      filtrarPorCategoria();
+    }
+
+    // Filtro por categoría y buscador rápido
+    function filtrarPorCategoria() {
+      const cat = selectCategoria.value.toLowerCase();
+      const filas = document.querySelectorAll('#cuerpo-tabla tr');
+      filas.forEach(fila => {
+        const categoriaTexto = fila.children[2].innerText.toLowerCase();
+        if (cat === 'todas' || categoriaTexto.includes(cat)) {
+          fila.style.display = '';
+        } else {
+          fila.style.display = 'none';
+        }
+      });
+    }
+
+    buscador.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      const filas = document.querySelectorAll('#cuerpo-tabla tr');
+      filas.forEach(fila => {
+        const texto = fila.innerText.toLowerCase();
+        fila.style.display = texto.includes(term) ? '' : 'none';
+      });
+    });
+
+    // Modal de Intervención
+    const modal = document.getElementById('modal-accion');
+    const modalProd = document.getElementById('modal-producto');
+    const modalSub = document.getElementById('modal-subtitulo');
+    const modalTitulo = document.getElementById('modal-titulo');
+
+    function ejecutarAccion(tipo, producto, sku) {
+      modalTitulo.innerText = `Aplicar ${tipo}`;
+      modalSub.innerText = `Referencia: ${sku}`;
+      modalProd.value = producto;
+      modal.classList.remove('hidden');
+    }
+
+    function cerrarModal() {
+      modal.classList.add('hidden');
+    }
+
+    function confirmarAccion() {
+      cerrarModal();
+      mostrarToast(`Estrategia aplicada con éxito a ${modalProd.value}`);
+    }
+
+    // Exportar CSV
+    document.getElementById('btn-exportar').addEventListener('click', () => {
+      mostrarToast('Generando archivo CSV de productos estancados...');
+      setTimeout(() => {
+        mostrarToast('Descarga completada: baja_rotacion_13_11_2026.csv');
+      }, 900);
+    });
+
+    // Toast helper
+    function mostrarToast(msg) {
+      const toast = document.getElementById('toast-notificacion');
+      document.getElementById('toast-mensaje').innerText = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3200);
+    }
+  </script>
+</div></main></div></body></html>

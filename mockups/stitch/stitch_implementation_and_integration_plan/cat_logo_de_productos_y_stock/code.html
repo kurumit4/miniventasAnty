@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary":"#ffffff","surface-bright":"#f7f9ff","text-muted":"#52606D","background":"#f7f9ff","outline":"#6f7a70","tertiary-fixed-dim":"#8cd7a5","surface-container-low":"#edf4ff","secondary-container":"#98defe","on-surface-variant":"#3f4941","surface":"#f7f9ff","surface-bg":"#F5F7F6","on-primary-container":"#d1ffdb","on-primary-fixed":"#00210f","tertiary-fixed":"#a7f3bf","error":"#ba1a1a","on-error":"#ffffff","surface-container":"#e4effd","border-subtle":"#D9E0DC","on-tertiary-fixed":"#00210f","on-tertiary":"#ffffff","tertiary":"#15643c","status-warning":"#B45309","on-primary-fixed-variant":"#00522d","surface-container-high":"#dfe9f7","outline-variant":"#becabe","on-secondary-container":"#07637f","error-container":"#ffdad6","surface-card":"#FFFFFF","primary":"#006438","on-background":"#121d26","primary-container":"#1b7f4c","on-secondary-fixed":"#001f2a","primary-fixed":"#99f6b8","inverse-on-surface":"#e8f2ff","tertiary-container":"#347d52","surface-variant":"#d9e3f1","secondary":"#0f6682","status-success":"#2E7D32","secondary-fixed":"#bde9ff","secondary-fixed-dim":"#8ad0ef","on-tertiary-fixed-variant":"#00522e","on-secondary-fixed-variant":"#004d64","inverse-surface":"#27313c","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","surface-tint":"#006d3d","primary-fixed-dim":"#7dda9e","status-danger":"#B91C1C","on-error-container":"#93000a","on-surface":"#121d26","inverse-primary":"#7dda9e","on-tertiary-container":"#d2ffdc","surface-container-highest":"#d9e3f1","surface-dim":"#d1dbe8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-2xl":"3rem","space-lg":"1.5rem","space-sm":"0.5rem","margin":"1rem","gutter-desktop":"1.5rem","gutter":"1rem","space-xl":"2rem","space-md":"1rem","margin-desktop":"1.5rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"kpi-value":["Inter"],"kpi-value-mobile":["Inter"],"table-data":["Inter"]},"fontSize":{"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","fontWeight":"600"}],"kpi-value":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"kpi-value-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"table-data":["14px",{"lineHeight":"20px","fontWeight":"500"}]}}}}</script></head><body class="bg-surface-bg font-body-md text-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card z-50 flex flex-col justify-between border-r border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border-subtle bg-surface-card"><img alt="MiMercado Ventas Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCIVW-_1tLYvzP2T73q7IKSBsn7ZwVqKVeod7QCiIr9BsTWm_2pOovzSAD9DgEyDcVvc3LAiaAWW3F0JYyPxfLTXx5wbrOOTArAR08pwe-ZLAguItDvxmhpEb1TbZ0TDSvBUST1K7ZpIrj7yYbSDO2EIowxy43qhcQ8zfS0R3C3SZSFl3DBxi1npYYCUw0U1gNGL0HiFLmJzq3W0txrN0FuG512DjdsO-td7WxRfpY"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface leading-tight tracking-tight">MiMercado</span><span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Supermercado de Barrio</span></div></div><div class="p-space-md"><div class="font-label-sm text-label-sm uppercase text-text-muted px-space-sm pb-space-xs font-semibold">Operaciones</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="tablero" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Tablero</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="ventas" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Ventas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="nueva-venta" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Nueva venta</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="productos" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Productos</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="baja-rotacion" href="#"><span class="material-symbols-outlined text-[20px]">trending_down</span><span class="font-body-md text-body-md">Baja rotación</span></a></nav></div></div><div class="p-space-md border-t border-border-subtle bg-surface-bg"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-text-muted uppercase font-semibold">Caja & Turno</span><span class="inline-flex items-center px-1.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-tertiary font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success mr-1"></span>Activa</span></div><div class="font-label-md text-label-md text-on-surface font-semibold truncate">Caja Principal</div><div class="font-body-sm text-body-sm text-text-muted flex items-center gap-1 mt-0.5"><span class="material-symbols-outlined text-[14px]">schedule</span>Turno Mañana</div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-subtle z-40 px-gutter-desktop flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="MiMercado Ventas Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCIVW-_1tLYvzP2T73q7IKSBsn7ZwVqKVeod7QCiIr9BsTWm_2pOovzSAD9DgEyDcVvc3LAiaAWW3F0JYyPxfLTXx5wbrOOTArAR08pwe-ZLAguItDvxmhpEb1TbZ0TDSvBUST1K7ZpIrj7yYbSDO2EIowxy43qhcQ8zfS0R3C3SZSFl3DBxi1npYYCUw0U1gNGL0HiFLmJzq3W0txrN0FuG512DjdsO-td7WxRfpY"/><div class="flex items-center gap-space-xs text-text-muted font-body-sm text-body-sm border border-border-subtle rounded-lg px-2.5 py-1.5 bg-surface-bg"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span>13/11/2026</span></div><div class="relative hidden xl:block"><div class="flex items-center border border-border-subtle rounded-lg bg-surface-bg px-2.5 py-1.5 text-text-muted"><span class="material-symbols-outlined text-[16px] mr-1.5">storefront</span><span class="font-label-md text-label-md text-on-surface font-medium">Sede Central (Barrio Sur)</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs border-r border-border-subtle pr-space-md"><button class="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-on-surface hover:bg-surface-bg transition-colors" title="Buscar rápido" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button class="relative w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-on-surface hover:bg-surface-bg transition-colors" title="Alertas de stock" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-status-danger"></span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Carlos</div><div class="font-label-sm text-label-sm text-text-muted">Propietario / Operador</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-bg flex-1 p-gutter-desktop"><div class="flex flex-col w-full space-y-space-lg">
+<!-- CABECERA PRINCIPAL Y MÉTRICAS RÁPIDAS -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-text-muted font-label-sm uppercase tracking-wider mb-1">
+<span>Inventario</span>
+<span>/</span>
+<span class="text-on-surface">Gestión de Catálogo</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Catálogo de Productos e Inventario</h1>
+<p class="font-body-md text-body-md text-text-muted">Control de existencias mínimas (RF-12), reposición rápida y márgenes comerciales calculados (RN-05).</p>
+</div>
+<div class="flex items-center gap-space-md flex-wrap lg:flex-nowrap">
+<!-- Tarjetas métricas compactas -->
+<div class="flex items-center gap-space-sm bg-surface-card px-space-md py-2.5 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<div>
+<span class="block font-label-sm text-label-sm text-text-muted">Activos</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">148</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-amber-50 px-space-md py-2.5 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-status-warning text-[20px]">warning</span>
+<div>
+<span class="block font-label-sm text-label-sm text-status-warning">Stock Crítico</span>
+<span class="font-headline-md text-headline-md text-status-warning font-semibold">12</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-card px-space-md py-2.5 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-text-muted text-[20px]">archive</span>
+<div>
+<span class="block font-label-sm text-label-sm text-text-muted">Inactivos</span>
+<span class="font-headline-md text-headline-md text-text-muted font-semibold">5</span>
+</div>
+</div>
+<!-- Botón Primario Nuevo Producto -->
+<button class="h-10 px-5 rounded-lg bg-primary-container hover:bg-tertiary text-on-primary font-headline-md text-body-md inline-flex items-center gap-2 shadow-sm transition-colors cursor-pointer ml-auto lg:ml-0" id="btnOpenNewProductModal" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>+ Nuevo Producto</span>
+</button>
+</div>
+</div>
+<!-- BARRA DE HERRAMIENTAS Y FILTROS -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Buscador Predictivo -->
+<div class="md:col-span-5 relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-muted">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-10 pl-10 pr-10 bg-surface-bg rounded-lg text-body-md text-on-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="productSearchInput" placeholder="Buscar por nombre, marca o SKU..." type="text"/>
+<button class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-text-muted hover:text-on-surface cursor-pointer" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Filtro Categoría -->
+<div class="md:col-span-3">
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-bg rounded-lg text-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-secondary transition-all cursor-pointer" id="filterCategory">
+<option value="todas">Categoría: Todas</option>
+<option value="abarrotes">Abarrotes</option>
+<option value="lacteos">Lácteos</option>
+<option value="frutas">Frutas y Verduras</option>
+<option value="aseo">Aseo</option>
+<option value="bebidas">Bebidas</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none text-text-muted">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Filtro Estado Stock -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-bg rounded-lg text-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-secondary transition-all cursor-pointer" id="filterStock">
+<option value="todos">Stock: Todos</option>
+<option value="bajo">Solo Stock Bajo</option>
+<option value="normal">Stock Normal</option>
+<option value="cero">Sin Stock (0)</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none text-text-muted">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Checkbox Inactivos -->
+<div class="md:col-span-2 flex items-center justify-start md:justify-end gap-2">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-secondary cursor-pointer accent-primary-container" id="showInactiveToggle" type="checkbox"/>
+<span class="font-label-md text-label-md text-text-muted">Mostrar inactivos</span>
+</label>
+</div>
+</div>
+<!-- Píldoras de resumen de inventario / Estado operativo -->
+<div class="flex items-center gap-space-xs flex-wrap pt-2">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Vista activa:</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-bg font-label-sm text-label-sm text-on-surface-variant">153 ítems catalogados</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-bg font-label-sm text-label-sm text-on-surface-variant">Valorización: $ 18.420.500 COP</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm">Margen promedio 26.1%</span>
+</div>
+</div>
+<!-- TABLA DE PRODUCTOS Y CATALOGO -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-bg text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md text-left font-semibold">SKU / Código</th>
+<th class="py-3 px-space-md text-left font-semibold">Producto y Categoría</th>
+<th class="py-3 px-space-md text-right font-semibold">Costo Unit.</th>
+<th class="py-3 px-space-md text-right font-semibold">Precio Venta</th>
+<th class="py-3 px-space-md text-right font-semibold">Margen Unit.</th>
+<th class="py-3 px-space-md text-right font-semibold">Stock Actual</th>
+<th class="py-3 px-space-md text-right font-semibold">Stock Mín.</th>
+<th class="py-3 px-space-md text-center font-semibold">Estado Stock</th>
+<th class="py-3 px-space-md text-center font-semibold">Estado</th>
+<th class="py-3 px-space-md text-right font-semibold">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-bg font-table-data text-table-data text-on-surface">
+<!-- FILA 1: Arroz Diana -->
+<tr class="hover:bg-surface-bg transition-colors product-row" data-active="true" data-category="abarrotes" data-stock-state="normal">
+<td class="py-3.5 px-space-md font-mono text-body-sm text-secondary font-semibold">SKU-101</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">grocery</span>
+</div>
+<div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface">Arroz Diana 1kg</div>
+<div class="font-label-sm text-label-sm text-text-muted">Abarrotes • Grano Largo Tipo 1</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">$ 3.000</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-on-surface">$ 4.000</td>
+<td class="py-3.5 px-space-md text-right tabular-nums">
+<span class="text-status-success font-semibold">25,0 %</span>
+<span class="block font-label-sm text-label-sm text-text-muted">($ 1.000)</span>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-on-surface">48 un.</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">20 un.</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-status-success font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                Stock Normal
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-bg text-on-surface">Activo</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="btn-edit p-1.5 rounded-lg text-text-muted hover:text-primary hover:bg-surface-bg transition-colors" data-category="Abarrotes" data-cost="3000" data-min="20" data-name="Arroz Diana 1kg" data-price="4000" data-sku="SKU-101" data-stock="48" title="Editar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-toggle-status p-1.5 rounded-lg text-text-muted hover:text-status-danger hover:bg-surface-bg transition-colors" title="Desactivar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 2: Aceite Vegetal Premier -->
+<tr class="hover:bg-surface-bg transition-colors bg-amber-50/20 product-row" data-active="true" data-category="abarrotes" data-stock-state="bajo">
+<td class="py-3.5 px-space-md font-mono text-body-sm text-secondary font-semibold">SKU-204</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-warning text-[20px]">water_drop</span>
+</div>
+<div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface">Aceite Vegetal Premier 1000ml</div>
+<div class="font-label-sm text-label-sm text-text-muted">Abarrotes • Aceites y Grasas</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">$ 6.800</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-on-surface">$ 9.000</td>
+<td class="py-3.5 px-space-md text-right tabular-nums">
+<span class="text-status-success font-semibold">24,4 %</span>
+<span class="block font-label-sm text-label-sm text-text-muted">($ 2.200)</span>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-status-warning">4 un.</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">10 un.</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-amber-100 text-status-warning font-semibold">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                Stock Bajo
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-bg text-on-surface">Activo</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="btn-edit p-1.5 rounded-lg text-text-muted hover:text-primary hover:bg-surface-bg transition-colors" data-category="Abarrotes" data-cost="6800" data-min="10" data-name="Aceite Vegetal Premier 1000ml" data-price="9000" data-sku="SKU-204" data-stock="4" title="Editar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-toggle-status p-1.5 rounded-lg text-text-muted hover:text-status-danger hover:bg-surface-bg transition-colors" title="Desactivar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 3: Leche Entera Alquería -->
+<tr class="hover:bg-surface-bg transition-colors bg-amber-50/20 product-row" data-active="true" data-category="lacteos" data-stock-state="bajo">
+<td class="py-3.5 px-space-md font-mono text-body-sm text-secondary font-semibold">SKU-305</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_drink</span>
+</div>
+<div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface">Leche Entera Alquería 1L</div>
+<div class="font-label-sm text-label-sm text-text-muted">Lácteos • Pasteurizada</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">$ 3.300</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-on-surface">$ 4.500</td>
+<td class="py-3.5 px-space-md text-right tabular-nums">
+<span class="text-status-success font-semibold">26,7 %</span>
+<span class="block font-label-sm text-label-sm text-text-muted">($ 1.200)</span>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-status-warning">8 un.</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">15 un.</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-amber-100 text-status-warning font-semibold">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                Stock Bajo
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-bg text-on-surface">Activo</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="btn-edit p-1.5 rounded-lg text-text-muted hover:text-primary hover:bg-surface-bg transition-colors" data-category="Lácteos" data-cost="3300" data-min="15" data-name="Leche Entera Alquería 1L" data-price="4500" data-sku="SKU-305" data-stock="8" title="Editar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-toggle-status p-1.5 rounded-lg text-text-muted hover:text-status-danger hover:bg-surface-bg transition-colors" title="Desactivar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 4: Crema Dental Colgate -->
+<tr class="hover:bg-surface-bg transition-colors product-row" data-active="true" data-category="aseo" data-stock-state="normal">
+<td class="py-3.5 px-space-md font-mono text-body-sm text-secondary font-semibold">SKU-402</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">clean_hands</span>
+</div>
+<div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface">Crema Dental Colgate 100ml</div>
+<div class="font-label-sm text-label-sm text-text-muted">Aseo • Higiene Bucal</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">$ 4.200</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-on-surface">$ 5.800</td>
+<td class="py-3.5 px-space-md text-right tabular-nums">
+<span class="text-status-success font-semibold">27,6 %</span>
+<span class="block font-label-sm text-label-sm text-text-muted">($ 1.600)</span>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-on-surface">25 un.</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">12 un.</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-status-success font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                Stock Normal
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-bg text-on-surface">Activo</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="btn-edit p-1.5 rounded-lg text-text-muted hover:text-primary hover:bg-surface-bg transition-colors" data-category="Aseo" data-cost="4200" data-min="12" data-name="Crema Dental Colgate 100ml" data-price="5800" data-sku="SKU-402" data-stock="25" title="Editar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="btn-toggle-status p-1.5 rounded-lg text-text-muted hover:text-status-danger hover:bg-surface-bg transition-colors" title="Desactivar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 5: Gaseosa Litrón Retornable (Inactivo & Agotado) -->
+<tr class="hover:bg-surface-bg transition-colors opacity-75 product-row" data-active="false" data-category="bebidas" data-stock-state="cero">
+<td class="py-3.5 px-space-md font-mono text-body-sm text-text-muted">SKU-999</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-bg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-text-muted text-[20px]">sports_bar</span>
+</div>
+<div>
+<div class="font-headline-md text-body-md font-semibold text-text-muted line-through">Gaseosa Litrón Retornable</div>
+<div class="font-label-sm text-label-sm text-text-muted">Bebidas • Refresco Familiar</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">$ 2.800</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted font-semibold">$ 3.800</td>
+<td class="py-3.5 px-space-md text-right tabular-nums">
+<span class="text-text-muted font-semibold">26,3 %</span>
+<span class="block font-label-sm text-label-sm text-text-muted">($ 1.000)</span>
+</td>
+<td class="py-3.5 px-space-md text-right tabular-nums font-semibold text-status-danger">0 un.</td>
+<td class="py-3.5 px-space-md text-right tabular-nums text-text-muted">8 un.</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-red-100 text-status-danger font-semibold">
+                Sin Stock (0)
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-bg text-text-muted font-medium">Inactivo</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="btn-activate px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-container hover:bg-secondary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Activar
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación y Contador de Registros -->
+<div class="px-space-md py-3 bg-surface-card flex items-center justify-between border-t border-surface-bg">
+<div class="font-body-sm text-body-sm text-text-muted">
+        Mostrando <span class="font-semibold text-on-surface">5</span> de <span class="font-semibold text-on-surface">153</span> productos registrados
+      </div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-text-muted/40 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 rounded-lg bg-surface-bg font-label-md text-label-md font-semibold text-on-surface">1</span>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-bg font-label-md text-label-md text-text-muted" type="button">2</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-bg font-label-md text-label-md text-text-muted" type="button">3</button>
+<button class="p-1.5 rounded-lg text-text-muted hover:text-on-surface hover:bg-surface-bg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PANEL / MODAL LATERAL DE CREACIÓN Y EDICIÓN (RF-13, RF-15, RN-07) -->
+<div class="hidden fixed inset-0 z-50 overflow-hidden bg-black/40 backdrop-blur-xs flex justify-end" id="productModal">
+<div class="w-full max-w-lg bg-surface-card h-full shadow-2xl flex flex-col justify-between transform transition-transform duration-300" id="productModalContent">
+<!-- Cabecera de Modal -->
+<div class="px-space-lg py-4 border-b border-surface-bg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Registro de Inventario</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface" id="modalTitle">Nuevo Producto</h2>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-on-surface hover:bg-surface-bg transition-colors" id="btnCloseModal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Formulario de Producto -->
+<form class="p-space-lg overflow-y-auto flex-1 space-y-space-md" id="productForm">
+<!-- Nombre del Producto -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1 font-semibold" for="formProdName">Nombre del producto *</label>
+<input class="w-full h-10 px-3 bg-surface-bg rounded-lg text-body-md text-on-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="formProdName" placeholder="Ej. Harina Pan 1kg" required="" type="text"/>
+</div>
+<!-- SKU y Categoría en Grid de 2 col -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="formProdSku">SKU / Código *</label>
+<button class="font-label-sm text-label-sm text-primary hover:underline" id="btnGenSku" type="button">Autogenerar</button>
+</div>
+<input class="w-full h-10 px-3 bg-surface-bg rounded-lg text-body-md font-mono text-on-surface uppercase focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="formProdSku" placeholder="SKU-000" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1 font-semibold" for="formProdCategory">Categoría *</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-bg rounded-lg text-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-secondary transition-all cursor-pointer" id="formProdCategory" required="">
+<option value="">Seleccione...</option>
+<option value="Abarrotes">Abarrotes</option>
+<option value="Lácteos">Lácteos</option>
+<option value="Frutas y Verduras">Frutas y Verduras</option>
+<option value="Aseo">Aseo</option>
+<option value="Bebidas">Bebidas</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none text-text-muted">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Costo Unitario y Precio de Venta -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1 font-semibold" for="formProdCost">Costo Unitario (COP) *</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-muted font-body-md">$</span>
+<input class="w-full h-10 pl-7 pr-3 bg-surface-bg rounded-lg text-body-md tabular-nums text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="formProdCost" min="0" placeholder="0" required="" step="50" type="number"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1 font-semibold" for="formProdPrice">Precio de Venta (COP) *</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-muted font-body-md">$</span>
+<input class="w-full h-10 pl-7 pr-3 bg-surface-bg rounded-lg text-body-md tabular-nums text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="formProdPrice" min="0" placeholder="0" required="" step="50" type="number"/>
+</div>
+</div>
+</div>
+<!-- Indicador de Margen Proyectado en Tiempo Real (RN-05) -->
+<div class="p-space-md rounded-xl bg-surface-bg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">query_stats</span>
+<div>
+<span class="block font-label-sm text-label-sm text-text-muted">Margen Comercial (RN-05)</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface" id="labelMarginText">Esperando valores de precio...</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full font-label-md text-label-md font-bold bg-surface-container-high text-text-muted" id="badgeCalculatedMargin">-- %</span>
+</div>
+<!-- Stock Inicial y Stock Mínimo -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1 font-semibold" for="formProdStock">Stock Inicial *</label>
+<input class="w-full h-10 px-3 bg-surface-bg rounded-lg text-body-md tabular-nums text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="formProdStock" min="0" placeholder="0" required="" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1 font-semibold" for="formProdMinStock">Stock Mínimo para Alerta *</label>
+<input class="w-full h-10 px-3 bg-surface-bg rounded-lg text-body-md tabular-nums text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="formProdMinStock" min="1" placeholder="5" required="" type="number"/>
+</div>
+</div>
+<!-- Notas o Regla de Negocio (RN-07) -->
+<div class="p-3 bg-surface-container-low rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Regla RN-07:</strong> El stock mínimo activará avisos visuales automáticos en la caja registradora cuando las existencias desciendan a este límite.
+          </p>
+</div>
+</form>
+<!-- Botones de Acción Footer -->
+<div class="px-space-lg py-4 border-t border-surface-bg flex items-center justify-end gap-space-sm bg-surface-card">
+<button class="h-10 px-4 rounded-lg bg-surface-bg hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors cursor-pointer" id="btnCancelModal" type="button">
+          Cancelar
+        </button>
+<button class="h-10 px-5 rounded-lg bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md font-semibold transition-colors shadow-sm cursor-pointer flex items-center gap-1.5" id="btnSubmitProduct" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Guardar Producto</span>
+</button>
+</div>
+</div>
+</div>
+<!-- DIÁLOGO DE NOTIFICACIÓN TOAST (Feedback sutil) -->
+<div class="fixed bottom-6 right-6 z-50 hidden bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 font-body-md text-body-md" id="toastNotification">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span id="toastMessage">Operación realizada con éxito</span>
+</div>
+</div>
+<script>
+  (function initProductCatalog() {
+    // Selectores DOM
+    const modal = document.getElementById('productModal');
+    const btnOpenNew = document.getElementById('btnOpenNewProductModal');
+    const btnClose = document.getElementById('btnCloseModal');
+    const btnCancel = document.getElementById('btnCancelModal');
+    const form = document.getElementById('productForm');
+    const btnSubmit = document.getElementById('btnSubmitProduct');
+    const modalTitle = document.getElementById('modalTitle');
+    const searchInput = document.getElementById('productSearchInput');
+    const clearSearch = document.getElementById('clearSearchBtn');
+    const filterCat = document.getElementById('filterCategory');
+    const filterStock = document.getElementById('filterStock');
+    const toggleInactive = document.getElementById('showInactiveToggle');
+    const btnGenSku = document.getElementById('btnGenSku');
+    
+    // Inputs de margen
+    const inputCost = document.getElementById('formProdCost');
+    const inputPrice = document.getElementById('formProdPrice');
+    const labelMarginText = document.getElementById('labelMarginText');
+    const badgeMargin = document.getElementById('badgeCalculatedMargin');
+
+    // Toast
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+
+    function showToast(msg) {
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3200);
+    }
+
+    // Apertura y Cierre Modal
+    function openModal(isEdit = false, data = {}) {
+      if (isEdit) {
+        modalTitle.textContent = 'Editar Producto: ' + (data.sku || '');
+        document.getElementById('formProdName').value = data.name || '';
+        document.getElementById('formProdSku').value = data.sku || '';
+        document.getElementById('formProdCategory').value = data.category || '';
+        document.getElementById('formProdCost').value = data.cost || '';
+        document.getElementById('formProdPrice').value = data.price || '';
+        document.getElementById('formProdStock').value = data.stock || '';
+        document.getElementById('formProdMinStock').value = data.min || '';
+      } else {
+        modalTitle.textContent = 'Nuevo Producto';
+        form.reset();
+      }
+      calcMargin();
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+    }
+
+    btnOpenNew.addEventListener('click', () => openModal(false));
+    btnClose.addEventListener('click', closeModal);
+    btnCancel.addEventListener('click', closeModal);
+
+    // Cerrar al dar click en backdrop
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Cálculo dinámico de Margen (RN-05): ((Venta - Costo) / Venta) * 100
+    function calcMargin() {
+      const cost = parseFloat(inputCost.value) || 0;
+      const price = parseFloat(inputPrice.value) || 0;
+
+      if (price > 0 && cost >= 0) {
+        const diff = price - cost;
+        const marginPct = (diff / price) * 100;
+        
+        badgeMargin.textContent = marginPct.toFixed(1) + ' %';
+        labelMarginText.textContent = `Ganancia: $ ${diff.toLocaleString('es-CO')} COP por unidad`;
+
+        if (marginPct >= 20) {
+          badgeMargin.className = 'px-2.5 py-1 rounded-full font-label-md text-label-md font-bold bg-emerald-100 text-status-success';
+        } else if (marginPct > 0) {
+          badgeMargin.className = 'px-2.5 py-1 rounded-full font-label-md text-label-md font-bold bg-amber-100 text-status-warning';
+        } else {
+          badgeMargin.className = 'px-2.5 py-1 rounded-full font-label-md text-label-md font-bold bg-red-100 text-status-danger';
+        }
+      } else {
+        badgeMargin.textContent = '-- %';
+        labelMarginText.textContent = 'Ingrese costo y precio válidos';
+        badgeMargin.className = 'px-2.5 py-1 rounded-full font-label-md text-label-md font-bold bg-surface-container-high text-text-muted';
+      }
+    }
+
+    inputCost.addEventListener('input', calcMargin);
+    inputPrice.addEventListener('input', calcMargin);
+
+    // Autogenerar SKU
+    btnGenSku.addEventListener('click', () => {
+      const randomSku = 'SKU-' + Math.floor(100 + Math.random() * 900);
+      document.getElementById('formProdSku').value = randomSku;
+    });
+
+    // Envío del formulario
+    btnSubmit.addEventListener('click', () => {
+      const name = document.getElementById('formProdName').value;
+      const sku = document.getElementById('formProdSku').value;
+      if (!name || !sku) {
+        alert('Por favor complete los campos obligatorios: Nombre y SKU.');
+        return;
+      }
+      closeModal();
+      showToast(`Producto ${sku} guardado con éxito en el catálogo.`);
+    });
+
+    // Configurar botones de editar existentes en la tabla
+    document.querySelectorAll('.btn-edit').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const b = e.currentTarget;
+        openModal(true, {
+          sku: b.getAttribute('data-sku'),
+          name: b.getAttribute('data-name'),
+          category: b.getAttribute('data-category'),
+          cost: b.getAttribute('data-cost'),
+          price: b.getAttribute('data-price'),
+          stock: b.getAttribute('data-stock'),
+          min: b.getAttribute('data-min')
+        });
+      });
+    });
+
+    // Activar producto desactivado
+    document.querySelectorAll('.btn-activate').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showToast('Producto reactivado para ventas en mostrador.');
+      });
+    });
+
+    // Desactivar producto
+    document.querySelectorAll('.btn-toggle-status').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showToast('Estado del producto modificado.');
+      });
+    });
+
+    // Filtros combinados en vivo
+    function applyFilters() {
+      const term = searchInput.value.toLowerCase().trim();
+      const cat = filterCat.value.toLowerCase();
+      const stock = filterStock.value.toLowerCase();
+      const showInactive = toggleInactive.checked;
+
+      clearSearch.classList.toggle('hidden', term === '');
+
+      const rows = document.querySelectorAll('.product-row');
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        const rowCat = (row.getAttribute('data-category') || '').toLowerCase();
+        const rowStock = (row.getAttribute('data-stock-state') || '').toLowerCase();
+        const isActive = row.getAttribute('data-active') === 'true';
+
+        const matchSearch = term === '' || text.includes(term);
+        const matchCat = cat === 'todas' || rowCat.includes(cat);
+        const matchStock = stock === 'todos' || rowStock === stock;
+        const matchInactive = showInactive ? true : isActive;
+
+        if (matchSearch && matchCat && matchStock && matchInactive) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+    filterCat.addEventListener('change', applyFilters);
+    filterStock.addEventListener('change', applyFilters);
+    toggleInactive.addEventListener('change', applyFilters);
+
+    clearSearch.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilters();
+    });
+
+  })();
+</script></main></div></body></html>

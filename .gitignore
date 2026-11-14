@@ -1,0 +1,21 @@
+# Java / Maven
+target/
+*.class
+*.log
+# Node
+node_modules/
+dist/
+# Entorno y secretos
+.env
+.env.*
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Binarios pesados
+*.exe
+mockups/stitch/*.exe
+
+*.exe
